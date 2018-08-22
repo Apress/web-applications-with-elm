@@ -1,0 +1,32 @@
+{
+  "scripts": {
+    "start": "electron ./app",
+    "postinstall": "install-app-deps",
+    "pack": "build --dir",
+    "dist": "build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kujua/bookcompanion-elm"
+  },
+  "keywords": [
+    "Elm",
+    "example"
+  ],
+  "author": "Wolfgang Loder",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/kujua/bookcompanion-elm/issues"
+  },
+  "homepage": "https://github.com/kujua/bookcompanion-elm",
+  "devDependencies": {
+    "electron": "1.4.1"
+  },
+  "build": {
+    "productName": "Elm-Electron-Example",
+    "appId": "elm-electron-example",
+    "mac": {
+      "category": "kujua.elmbook.example"
+    }
+  }
+}

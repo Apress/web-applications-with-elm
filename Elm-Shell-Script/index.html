@@ -1,0 +1,14 @@
+<div id="spelling"></div>
+<script src="elm.js"></script>
+<script>
+    var app = Elm.ShellScript.fullscreen();
+    app.ports.check.subscribe(function(word) {
+        var suggestions = spellCheck(word);
+        app.ports.suggestions.send(suggestions);
+    });
+    function spellCheck(word) {
+        // have a real implementation!
+        return [word];
+    }
+    app.ports.suggestions.send(["Word"]);
+</script>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ <title>Pizzeria - Elm Example</title>
+  <script src="static/js/jquery-3.3.1.slim.min.js"></script>
+  <script src="static/js/popper.min.js"></script>
+  <script src="static/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="static/css/bootstrap.min.css">
+  <link rel="stylesheet" href="static/css/pizzeria.css" />
+
+  <link rel="icon" type="image/png" sizes="32x32" href="static/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="static/images/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="static/images/favicon-16x16.png">
+
+  <script src="PizzaOrder.js" type="text/javascript"></script>
+ </head>
+ <body>
+  <div id="embeddedelm"></div>
+  <script type="text/javascript">
+
+    let elmapp = Elm.PizzaOrder.fullscreen({
+      dummyflag: 0
+    });
+
+// elmapp.ports.initializejs.subscribe(function(flag) {
+//
+//   $(document).ready(function(){
+//
+//     // window.dbitem =
+//     // [
+//     //   { "text": "Calzone"},
+//     //   { "text": "Margherita"}
+//     // ];
+//     // $("#orderlist").ejListView({
+//     //   items:itemlist
+//     // });
+//     // $("#orders").ejListView({
+//     //
+//     // });
+//   });
+// });
+
+$(document).ready(function(){
+  $('.form-check-input').click(function() {
+    if($(this).is(":checked")) {
+      // console.log($(this).val());
+      elmapp.ports.setTopping.send($(this).val());
+    } else {
+      // console.log($(this).val() + " removed");
+      elmapp.ports.removeTopping.send($(this).val());
+    }
+  });
+  $('#name').on('input', function() {
+    elmapp.ports.setName.send($(this).val());
+  })
+  $('#address').on('input', function() {
+    elmapp.ports.setAddress.send($(this).val());
+  });
+  $('#telephone').on('input', function() {
+    elmapp.ports.setTelephone.send($(this).val());
+  });
+  // $('.addorderbutton').click(function() {
+  //   elmapp.ports.addOrder.send();
+  // });
+
+  $('.dropdown-item').click(function() {
+    elmapp.ports.setPizza.send($(this).data('pizzaid').toString());
+    console.log($(this).data('pizzaid'));
+  });
+
+  $('#pizzaspinner').find('button').on('click', function(){
+    let input = $(this).closest('#pizzaspinner').find('input[name=quantity]');
+
+    if($(this).data('action') === 'incrementQtyPizza') {
+      if(input.attr('max') === undefined || parseInt(input.val()) < parseInt(input.attr('max'))) {
+        input.val(parseInt(input.val(), 10) + 1);
+      }
+    } else if($(this).data('action') === 'decrementQtyPizza') {
+      if(input.attr('min') === undefined || parseInt(input.val()) > parseInt(input.attr('min'))) {
+        input.val(parseInt(input.val(), 10) - 1);
+        elmapp.ports.setQuantity.send(input.val().toString());
+      }
+    }
+
+  });
+});
+
+
+  </script>
+ </body>
+</html>

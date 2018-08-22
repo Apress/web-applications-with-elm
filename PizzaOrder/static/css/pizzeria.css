@@ -1,0 +1,130 @@
+body {
+    background-color: ghostwhite;
+}
+
+#topbar {
+    background-color: #7ED321;
+}
+
+.topbar {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.pagebody {
+    padding-top: 10px;
+}
+
+.logo {
+    /*width: 48px;*/
+    /*height: 48px;*/
+    /*padding-right: 10px;*/
+}
+
+.logotext {
+    color: #FF0322;
+    font-size: 32px;
+    font-weight: bold;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.activetab {
+    font-weight: 800;
+    font-size: 18px;
+    padding-top: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.inactivetab {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.titlefixed {
+    /*width: 100px;*/
+}
+
+.titlefixed-toppings {
+    width: 100px;
+    font-size: 16px;
+}
+
+#toppingsselect {
+    margin-top: 10px;
+}
+
+.inputspinner {
+    width: 40px;
+}
+
+#pizzaspinner {
+    margin-top: 20px;
+}
+
+#pizzadropdownwrapper {
+    margin-left: 20px;
+    width: 60%;
+}
+
+.pizzadropdown {
+    width: 100%;
+}
+
+.pizzadropdownbutton {
+    width: 100%;
+}
+
+.pizzadropdownmenu {
+    width: 100%;
+}
+
+.addorderbuttonwrapper {
+    margin-top: 20px;
+}
+
+.addorderbutton {
+    width: 100%;
+}
+
+.btn-success {
+    font-size: 13px;
+    color: rgba(103, 192, 103, 0.75);
+    letter-spacing: 1px;
+    line-height: 15px;
+    border: 2px solid rgba(103, 192, 103, 0.75);
+    border-radius: 40px;
+    background: transparent;
+    transition: all 0.3s ease 0s;
+}
+
+/*noinspection CssInvalidFunction*/
+.btn-success:hover {
+    color: #FFF;
+    background: rgb(103, 192, 103, 0.75);
+    border: 2px solid rgb(103, 192, 103, 0.75);
+}
+
+.customerformfieldwrapper {
+    /*width: 40%;*/
+}
+
+.orderbadge {
+    margin-left: 5px;
+    padding-top: 5px;
+}
+
+.btn-success.disabled {
+    background-color: white;
+    color: #9a9a9a;
+    border-color: #9a9a9a;
+}
+
+.selectedpizza {
+    font-weight: bold;
+}
+
+.customerformrow {
+    margin-top: 10px;
+}

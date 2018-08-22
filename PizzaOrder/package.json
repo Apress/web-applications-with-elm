@@ -1,0 +1,17 @@
+{
+  "scripts": {
+    "cd": "elm make src/PizzaOrder.elm --output PizzaOrder.js --debug --yes",
+    "cdw": "elm make src/PizzaOrder.elm --output PizzaOrder.js --debug --warn --yes",
+    "c": "elm make src/PizzaOrder.elm --output PizzaOrder.js --yes",
+    "rp": "elm repl",
+    "r": "elm reactor --port 3505",
+    "watch": "chokidar '**/*.elm' -c 'elm make src/PizzaOrder.elm --output PizzaOrder.js --warn' --initial",
+    "watchd": "chokidar '**/*.elm' -c 'elm make src/PizzaOrder.elm --output PizzaOrder.js --debug --warn' --initial",
+    "tdd": "chokidar '**/*.elm' -c 'node_modules/elm-test/bin/elm-test' --initial",
+    "inittests": "cd tests; elm package install --yes",
+    "t": "node_modules/elm-test/bin/elm-test"
+  },
+  "devDependencies": {
+    "chokidar-cli": "^1.2.0"
+  }
+}

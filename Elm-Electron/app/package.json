@@ -1,0 +1,20 @@
+{
+  "name": "Elm-Electron-Example",
+  "version": "1.0.0",
+  "description": "Using elm with Electron",
+  "main": "./index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kujua/bookcompanion-elm.git"
+  },
+  "keywords": [
+    "Elm",
+    "example"
+  ],
+  "author": "GitHub",
+  "license": "CC0-1.0",
+  "bugs": {
+    "url": "https://github.com/kujua/bookcompanion-elm/issues"
+  },
+  "homepage": "https://github.com/kujua/bookcompanion-elm"
+}

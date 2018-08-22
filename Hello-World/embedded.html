@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+    <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+    <script src="./elm.js"></script>
+    <script>if (window.module) module = window.module;</script>
+    <!-- <script type="text/javascript">Elm.Hello.fullscreen()</script> -->
+    <div>
+      Element before the embedded Elm app
+    </div>
+    <div id="elm-main"></div>
+    <div>
+      Element after the embedded Elm app
+    </div>
+    <script>
+      var elmDiv = document.getElementById('elm-main');
+      var elmApp = Elm.Hello.embed(elmDiv)
+    </script>
+  </body>
+</html>

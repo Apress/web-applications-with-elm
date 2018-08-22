@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "c": "elm make allbasics.elm --output elm.js",
+    "cw": "elm make allbasics.elm --output elm.js --warn",
+    "rp": "elm repl",
+    "r": "http-server -p 8038 -d false",
+    "watch": "chokidar '**/*.elm' -c 'elm make allbasics.elm --output elm.js --warn' --initial"
+  },
+  "devDependencies": {
+    "chokidar-cli": "^1.2.0"
+  }
+}

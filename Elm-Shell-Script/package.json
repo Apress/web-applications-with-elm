@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "c": "elm make src/FixCode.elm --output elm.js",
+    "cw": "elm make src/FixCode.elm --output elm.js --warn",
+    "r": "elm repl",
+    "t": "node_modules/.bin/elm-test"
+  },
+  "dependencies": {
+    "elm-test": "^0.18.2"
+  }
+}
